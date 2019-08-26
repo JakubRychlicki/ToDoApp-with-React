@@ -1,0 +1,57 @@
+.taskBox {
+  position: relative;
+  margin-left: 100px;
+  margin-top: 2px;
+  height: 35px;
+}
+
+.taskBox p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.taskBox p em {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #16659a;
+}
+
+.taskBox p em span {
+  padding-right: 5px;
+  font-family: Arial;
+  font-weight: 550;
+}
+
+.completeBtn {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.deletion {
+  text-decoration: line-through;
+  color: black;
+}
+
+.bgc {
+  background-color: #16659a;
+}
+
+.deleteBtn {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  background-image: url("../images/delete.png");
+  background-size: contain;
+  margin-left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}

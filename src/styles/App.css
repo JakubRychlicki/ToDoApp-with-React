@@ -1,0 +1,15 @@
+/* Main box */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 540px;
+  height: 820px;
+  margin: 0 auto;
+  background-image: url("../images/background.png");
+  background-size: cover;
+}

@@ -1,0 +1,63 @@
+.tasksList {
+  height: 185px;
+  overflow: hidden;
+}
+
+.tasksTitle {
+  text-align: center;
+  padding: 4px;
+}
+
+.tasksTitle span {
+  font-size: 19px;
+  font-family: "Permanent Marker", cursive;
+  color: #16659a;
+  padding: 0 5px;
+}
+
+span.activeTasks,
+span.doneTasks {
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+span.activeTasks:hover {
+  margin-right: 10px;
+}
+
+span.doneTasks:hover {
+  margin-left: 10px;
+}
+
+.sortBox {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 20px;
+}
+
+.sortBox label {
+  font-size: 15px;
+  text-align: left;
+  padding-bottom: 2px;
+  font-family: "Arial";
+  font-weight: bold;
+}
+
+select {
+  background-color: #ee2838;
+  color: white;
+  outline: 0;
+  border: 0;
+}
+
+.tasksLength p {
+  text-align: center;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tasksLength span {
+  color: #ee2838;
+}

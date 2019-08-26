@@ -1,0 +1,291 @@
+/* Position objects in Form */
+
+.form {
+  margin-top: 68px;
+  flex-direction: column;
+}
+
+.form,
+.formBox,
+.leftSide,
+.rightSide {
+  display: flex;
+}
+
+.formBox {
+  padding-left: 60px;
+}
+
+.clearBox {
+  margin: 10px;
+  height: 50px;
+  align-self: flex-end;
+}
+
+div.rightSide {
+  min-width: 1px;
+}
+
+.leftSide,
+.rightSide {
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+
+input,
+label {
+  display: block;
+}
+
+.formBox {
+  min-height: 1px;
+  position: relative;
+}
+
+.dateBox,
+.timeBox,
+.impoBox,
+.categoryBox {
+  padding: 10px;
+  display: flex;
+}
+
+.impoBox,
+.categoryBox {
+  min-height: 75px;
+}
+
+.textBox {
+  height: 185px;
+  position: relative;
+}
+
+/* ADD ICONS */
+
+div.buttonClear,
+div.iconDate,
+div.iconTime,
+div.iconImpo {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+}
+
+div.buttonClear {
+  background-image: url("../images/rubber.png");
+  cursor: pointer;
+}
+div.iconDate {
+  background-image: url("../images/calendar.png");
+}
+div.iconTime {
+  background-image: url("../images/time.png");
+}
+div.iconImpo {
+  background-image: url("../images/crown.png");
+}
+/* Edition inputs */
+
+[type="time"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+[type="date"]::-webkit-clear-button {
+  display: none;
+}
+[type="time"]::-webkit-clear-button {
+  display: none;
+}
+
+/* Styling inputs */
+
+input[type="date"] {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+input[type="time"] {
+  margin-bottom: 5px;
+}
+
+input[type="date"],
+input[type="time"] {
+  font-family: "Permanent Marker", cursive;
+  cursor: pointer;
+  outline: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 22px;
+  color: #16659a;
+  max-width: 150px;
+}
+
+/* CUSTOM CHECKBOX */
+.checkbox-label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox-label {
+  display: block;
+  position: relative;
+  height: 36px;
+  width: 36px;
+  margin: 10px;
+  cursor: pointer;
+  background-image: url(../images/important.png);
+  background-size: contain;
+}
+
+.checkbox-label .checkbox-custom {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 36px;
+  width: 36px;
+  background-image: url(../images/important.png);
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+  /* border: 2px solid #000; */
+}
+
+.checkbox-label .checkbox-custom::after {
+  position: absolute;
+  content: "";
+  left: 18px;
+  top: 18px;
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  border: solid #16659a;
+  border-width: 0 3px 3px 0;
+  background-color: transparent;
+  transform: rotate(0deg) scale(0);
+  opacity: 1;
+  transition: all 0.3s ease-out;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom {
+  background-color: transparent;
+  border-radius: 50%;
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+  /* border: 2px solid #000; */
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::after {
+  transform: rotate(45deg) scale(1);
+  opacity: 1;
+  left: 12px;
+  top: -13px;
+  width: 15px;
+  height: 35px;
+  border: solid #16659a;
+  border-width: 0 2px 2px 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* End checkbox */
+
+/* Category */
+
+.categoryBox {
+  position: relative;
+}
+.categoryBox > div {
+  padding: 5px;
+}
+
+.category-Other,
+.category-Home,
+.category-School,
+.category-Work {
+  margin-right: 5px;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.category-Other {
+  background-image: url("../images/other.png");
+}
+.category-Home {
+  background-image: url("../images/homework.png");
+}
+.category-School {
+  background-image: url("../images/school.png");
+}
+.category-Work {
+  background-image: url("../images/work.png");
+}
+
+.category-Other:hover,
+.category-Home:hover,
+.category-School:hover,
+.category-Work:hover {
+  border: 2px dotted #ee2838;
+  border-radius: 50%;
+}
+
+.nameCategory {
+  display: inline-block;
+  font-family: "Permanent Marker", cursive;
+  font-size: 20px;
+  position: absolute;
+  bottom: 5px;
+  right: 25px;
+  width: 180px;
+}
+
+.nameCategory p {
+  display: inline-block;
+  font-family: "Permanent Marker", cursive;
+  color: #16659a;
+}
+
+/* Text input */
+
+input[type="text"] {
+  font-family: "Permanent Marker", cursive;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  margin: 6px auto;
+  display: block;
+  width: 300px;
+  font-size: 22px;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+}
+
+input[type="text"]::placeholder {
+  color: black;
+}
+
+/* Button ADD*/
+
+.buttonBox {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 60px;
+  width: 85px;
+  background-image: url("../images/add.png");
+  background-size: contain;
+  cursor: pointer;
+}
