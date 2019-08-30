@@ -12,11 +12,15 @@ class AddTask extends Component {
     date: this.today
   };
 
+  // TAKE A TEXT
+
   handleText = e => {
     this.setState({
       text: e.target.value
     });
   };
+
+  // TAKE  A CATEGORY
 
   handleCategory = e => {
     e.preventDefault();
@@ -40,11 +44,15 @@ class AddTask extends Component {
     }
   };
 
+  // IMPORTANT
+
   handleCheckbox = e => {
     this.setState({
       important: e.target.checked
     });
   };
+
+  // TAKE A DATE
 
   handleDate = e => {
     this.setState({
@@ -52,11 +60,15 @@ class AddTask extends Component {
     });
   };
 
+  // TAKE A TIME
+
   handleTime = e => {
     this.setState({
       time: e.target.value
     });
   };
+
+  // SEND TASK TO ARRAY
 
   handleClick = e => {
     e.preventDefault();
@@ -77,6 +89,8 @@ class AddTask extends Component {
     }
   };
 
+  // CLEAR DATA
+
   clearRubber = () => {
     this.setState({
       text: "",
@@ -88,9 +102,6 @@ class AddTask extends Component {
   };
 
   render() {
-    let maxDate = this.today.slice(0, 4) * 1 + 1;
-    maxDate = maxDate + "-12-31";
-
     return (
       <Fragment>
         <div className="form">
@@ -106,7 +117,6 @@ class AddTask extends Component {
                   value={this.state.date}
                   onChange={this.handleDate}
                   min={this.today}
-                  max={maxDate}
                 />
               </div>
               <div className="timeBox">

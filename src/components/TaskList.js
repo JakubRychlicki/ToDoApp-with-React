@@ -6,6 +6,8 @@ const TaskList = props => {
   const activeT = props.tasks.filter(task => task.active);
   const doneT = props.tasks.filter(task => !task.active);
 
+  // Sorting
+
   if (doneT.length >= 2) {
     doneT.sort((a, b) => {
       if (a.finishDate < b.finishDate) {
@@ -82,7 +84,7 @@ const TaskList = props => {
       </div>
       <div className="tasksLength">
         <p>
-          Tasks Length (
+          Number of tasks (
           <span>
             {props.statusChange ? activeTasks.length : doneTasks.length}
           </span>

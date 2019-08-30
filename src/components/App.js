@@ -11,6 +11,8 @@ class App extends Component {
     sortBy: "Newest"
   };
 
+  // Add task function
+
   addTask = (text, important, category, date, time) => {
     let czas = time.replace(":", "");
     const data = Date.parse(date);
@@ -36,6 +38,8 @@ class App extends Component {
     return true;
   };
 
+  // Change active and completed tasks
+
   handleClick = e => {
     let name = e.target.className;
     if (name === "activeTasks") {
@@ -49,6 +53,8 @@ class App extends Component {
     }
   };
 
+  // Delete task
+
   deleteTask = id => {
     let tasks = [...this.state.tasks];
     tasks = tasks.filter(task => task.id !== id);
@@ -56,6 +62,8 @@ class App extends Component {
       tasks
     });
   };
+
+  // Change task from active to completed
 
   changeTaskToCompleted = id => {
     const tasks = [...this.state.tasks];
@@ -70,12 +78,16 @@ class App extends Component {
     });
   };
 
+  // Sorting
+
   sortBy = e => {
     const name = e.target.value;
     this.setState({
       sortBy: name
     });
   };
+
+  // Animation complete button
 
   taskComplete = () => {
     const tasks = [...document.querySelectorAll(".taskBox p")];
